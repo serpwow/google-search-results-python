@@ -25,7 +25,7 @@ You can also use the [API Playground](https://app.serpwow.com/playground) to vis
 ## Simple Example
 Simplest example for a standard query "pizza", returning the Google SERP (Search Engine Results Page) data as JSON:
 ```python
-from google_search_results import GoogleSearchResults
+from serpwow.google_search_results import GoogleSearchResults
 import json
 
 # create the serpwow object, passing in our API key
@@ -50,7 +50,7 @@ To get a free API Key head over to [app.serpwow.com/signup](https://app.serpwow.
 ## Searching with a location
 Example of a Google query geo-locating the query as if the user were located in New York. 
 ```python
-from google_search_results import GoogleSearchResults
+from serpwow.google_search_results import GoogleSearchResults
 import json
 
 # create the serpwow object, passing in our API key
@@ -68,13 +68,13 @@ params = {
 result = serpwow.get_json(params)
 
 # pretty-print the result
-print json.dumps(result, indent=2, sort_keys=True))
+print json.dumps(result, indent=2, sort_keys=True)
 ```
 
 ## Searching Google Places, Google Videos, Google Images, Google Shopping and Google News
 Use the ``search_type`` param to search Google Places, Videos, Images and News. See the [Search API Parameters Docs](https://serpwow.com/docs/search/parameters) for full details of the additional params available for each search type.
 ```python
-from google_search_results import GoogleSearchResults
+from serpwow.google_search_results import GoogleSearchResults
 import json
 
 # create the serpwow object, passing in our API key
@@ -111,7 +111,7 @@ print json.dumps(result, indent=2, sort_keys=True)
 ## Returning results as JSON, HTML and CSV
 ``google-search-results-serpwow`` can return data in JSON, HTML and CSV formats using the ``get_json``, ``get_html`` and ``get_csv`` methods. For CSV results use the ``csv_fields`` param ([docs](https://serpwow.com/docs/search/csvfields)) to request specific result fields.
 ```python
-from google_search_results import GoogleSearchResults
+from serpwow.google_search_results import GoogleSearchResults
 import json
 
 # create the serpwow object, passing in our API key
@@ -138,7 +138,7 @@ result_csv = serpwow.get_csv(params)
 ## Requesting mobile and tablet results
 To request that SerpWow renders the Google search results via a mobile or tablet browser use the ``device`` param:
 ```python
-from google_search_results import GoogleSearchResults
+from serpwow.google_search_results import GoogleSearchResults
 import json
 
 serpwow = GoogleSearchResults("demo")
@@ -173,7 +173,7 @@ result_desktop_json = serpwow.get_json(params_desktop)
 ## Parsing results
 When making a request via the ``get_json`` method a standard Python ``dict`` is returned. You can inspect this dict to iterate, parse and store the results in your app.
 ```python
-from google_search_results import GoogleSearchResults
+from serpwow.google_search_results import GoogleSearchResults
 import json
 
 # make a simple query, returning JSON
@@ -196,7 +196,7 @@ if success:
 ## Paginating results, returning up to 100 results per page
 Use the ``start`` and ``num`` parameters to paginate through Google search results. ``start`` is 0-based. The maximum number of results returned per page (controlled by the ``num`` param) is 100 (a Google-imposed limitation) for all ``search_type``'s apart from Google Places, where the maximum is 20. Here's an example.
 ```python
-from google_search_results import GoogleSearchResults
+from serpwow.google_search_results import GoogleSearchResults
 import json
 
 # request the first 100 results
@@ -221,7 +221,7 @@ print json.dumps(result_page_2, indent=2, sort_keys=True)
 
 ## Search example with all parameters
 ```python
-from google_search_results import GoogleSearchResults
+from serpwow.google_search_results import GoogleSearchResults
 
 # create the serpwow object, passing in our API key
 serpwow = GoogleSearchResults("demo")
@@ -252,9 +252,9 @@ print result
 
 
 ## Locations API Example
-The [Locations API](https://serpwow.com/docs/locations/overview) allows you to search for SerpWow supported locations. You can supply the ``full_name`` returned by the Locations API as the ``location`` parameter in a Search API query (see example above) to retrieve search results geo-located to that location.
+The [Locations API](https://serpwow.com/docs/locations/overview) allows you to search for SerpWow supported Google search locations. You can supply the ``full_name`` returned by the Locations API as the ``location`` parameter in a Search API query (see [Searching with a location](https://github.com/serpwow/google-search-results-python#searching-with-a-location) example above) to retrieve search results geo-located to that location.
 ```python
-from google_search_results import GoogleSearchResults
+from serpwow.google_search_results import GoogleSearchResults
 import json
 
 # create the serpwow object, passing in our API key
@@ -275,7 +275,7 @@ print json.dumps(result, indent=2, sort_keys=True)
 ## Account API Example
 The [Account API](https://serpwow.com/docs/account/overview) allows you to check your current SerpWow usage and billing information. 
 ```python
-from google_search_results import GoogleSearchResults
+from serpwow.google_search_results import GoogleSearchResults
 import json
 
 # create the serpwow object, passing in our API key

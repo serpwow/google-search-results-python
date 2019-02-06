@@ -150,7 +150,6 @@ A snapshot (shortened for brevity) of the JSON response returned is shown below.
 ## Getting an API Key
 To get a free API Key head over to [app.serpwow.com/signup](https://app.serpwow.com/signup).
 
-
 ## Searching with a location
 Example of a Google query geo-locating the query as if the user were located in New York. 
 ```python
@@ -229,13 +228,13 @@ params = {
   "location" : "New York,New York,United States"
 }
 
-# retrieve the search results as JSON
+# retrieve the Google search results as JSON
 result_json = serpwow.get_json(params)
 
-# retrieve the search results as HTML
+# retrieve the Google search results as HTML
 result_html = serpwow.get_html(params)
 
-# retrieve the search results as CSV
+# retrieve the Google search results as a CSV
 result_csv = serpwow.get_csv(params)
 ```
 
@@ -285,7 +284,7 @@ serpwow = GoogleSearchResults("demo")
 result = serpwow.get_json({ "q" : "pizza" })
 
 # determine if the request was successful
-success = result["request_info"]
+success = result["request_info"]["success"]
 
 if success:
   
@@ -330,10 +329,9 @@ from serpwow.google_search_results import GoogleSearchResults
 # create the serpwow object, passing in our API key
 serpwow = GoogleSearchResults("demo")
 
-# set up a dict for the search parameters
+# set up a dict for the search parameters, retrieving results as CSV (note the csv_fields param)
 params = {
   "q" : "pizza",
-  "search_type" : "images",
   "gl" : "us",
   "hl" : "en",
   "location" : "New York,New York,United States",

@@ -1,2 +1,4 @@
 *.pyc
 README
+.DS_Store
+build/

@@ -9,7 +9,7 @@ long_description = pypandoc.convert(path.join(here, 'README.md'), 'rst')
 
 
 setup(name='google-search-results-serpwow',
-      version='1.0.6',
+      version='1.0.9',
       description='PIP package to scrape and parse Google Search Results using SerpWow. Visit https://serpwow.com to get a free API key.',
       url='https://github.com/serpwow/google-search-results-python',
       author='SerpWow',
@@ -20,6 +20,6 @@ setup(name='google-search-results-serpwow',
         ],
     python_requires='>=2.6, !=3.0.*, !=3.1.*, !=3.2.*',
     install_requires = ["requests"],
-    packages=find_packages(),
+    packages=['serpwow'],
     long_description=long_description,
 )

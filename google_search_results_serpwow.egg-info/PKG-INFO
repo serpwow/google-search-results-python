@@ -1,6 +1,6 @@
 Metadata-Version: 1.1
 Name: google-search-results-serpwow
-Version: 1.0.6
+Version: 1.0.9
 Summary: PIP package to scrape and parse Google Search Results using SerpWow. Visit https://serpwow.com to get a free API key.
 Home-page: https://github.com/serpwow/google-search-results-python
 Author: SerpWow
@@ -127,10 +127,10 @@ Description: Google Search Results in Python
            result = serpwow.get_json(params)
            print json.dumps(result, indent=2, sort_keys=True)
         
-           # perform a search on Google Places for "plumbers" in London
+           # perform a search on Google Places for "plumber" in London
            params = {
              "search_type" : "places",
-             "q" : "plumbers",
+             "q" : "plumber",
              "location" : "London,England,United Kingdom"
            }
            result = serpwow.get_json(params)

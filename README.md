@@ -23,6 +23,12 @@ We have included examples here but full SerpWow API documentation is available a
 
 You can also use the [API Playground](https://app.serpwow.com/playground) to visually build Google search requests using SerpWow.
 
+## Examples
+We have included examples here but full SerpWow API documentation is available at the [API Docs](https://serpwow.com/docs):
+- [Simple Example](/#simple-example) 
+- [Example Response](/#example-response) 
+- [Getting an API Key](/#getting-an-api-key)
+
 ## Simple Example
 Simplest example for a standard query "pizza", returning the Google SERP (Search Engine Results Page) data as JSON:
 ```python
@@ -44,7 +50,7 @@ result = serpwow.get_json(params)
 print json.dumps(result, indent=2, sort_keys=True)
 ```
 
-## Response
+## Example Response
 A snapshot (shortened for brevity) of the JSON response returned is shown below. For details of all of the fields from the Google search results page that are parsed please see the [docs](https://serpwow.com/docs/search/results/overview).
 ```json
 {

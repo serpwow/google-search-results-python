@@ -45,7 +45,7 @@ print json.dumps(result, indent=2, sort_keys=True)
 ```
 
 ## Response
-Except (shortened for brevity) of the JSON response returned is shown below. For details of all of the fields from the Google search results page that are parsed please see the [docs](https://serpwow.com/docs/search/results/overview).
+A snapshot (shortened for brevity) of the JSON response returned is shown below. For details of all of the fields from the Google search results page that are parsed please see the [docs](https://serpwow.com/docs/search/results/overview).
 ```json
 {
   "request_info": {

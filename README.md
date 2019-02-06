@@ -24,10 +24,18 @@ We have included examples here but full SerpWow API documentation is available a
 You can also use the [API Playground](https://app.serpwow.com/playground) to visually build Google search requests using SerpWow.
 
 ## Examples
-We have included examples here but full SerpWow API documentation is available at the [API Docs](https://serpwow.com/docs):
 - [Simple Example](#simple-example) 
 - [Example Response](#example-response) 
 - [Getting an API Key](#getting-an-api-key)
+- [Searching with a Location](#searching-with-a-location)
+- [Searching Google Places, Google Videos, Google Images, Google Shopping and Google News](#searching-google-places-google-videos-google-images-google-shopping-and-google-news)
+- [Returning results as JSON, HTML and CSV](#returning-results-as-json-html-and-csv)
+- [Requesting mobile and tablet results](#requesting-mobile-and-tablet-results)
+- [Parsing Results](#parsing-results)
+- [Paginating results, returning up to 100 results per page](#paginating-results-returning-up-to-100-results-per-page)
+- [Search example with all parameters](#search-example-with-all-parameters)
+- [Locations API Example](#locations-api-example)
+- [Account API Example](#account-api-example)
 
 ## Simple Example
 Simplest example for a standard query "pizza", returning the Google SERP (Search Engine Results Page) data as JSON:

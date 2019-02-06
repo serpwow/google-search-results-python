@@ -48,163 +48,164 @@ print json.dumps(result, indent=2, sort_keys=True)
 Except (shortened for brevity) of the JSON response returned is shown below. For details of all of the fields from the Google search results page that are parsed please see the [docs](https://serpwow.com/docs/search/results/overview).
 ```json
 {
-  request_info: {
-    success: true
+  "request_info": {
+    "success": true
   },
-  search_metadata: {
-    id: "20c8e44e9cacedabbdff2d9b7e854436056d4f33",
-    google_url: "https://www.google.com/search?q=pizza&oq=pizza&sourceid=chrome&ie=UTF-8",
-    total_time_taken: 0.14
+  "search_metadata": {
+    "id": "20c8e44e9cacedabbdff2d9b7e854436056d4f33",
+    "google_url": "https://www.google.com/search?q=pizza&oq=pizza&sourceid=chrome&ie=UTF-8",
+    "total_time_taken": 0.14
   },
-  search_parameters: {
-    q: "pizza"
+  "search_parameters": {
+    "q": "pizza"
   },
-  search_information: {
-    total_results: 1480000000,
-    time_taken_displayed: 0.45,
-    query_displayed: "pizza",
-    detected_location: "Ireland"
+  "search_information": {
+    "total_results": 1480000000,
+    "time_taken_displayed": 0.45,
+    "query_displayed": "pizza",
+    "detected_location": "Ireland"
   },
-  local_map: {
-    link: "https://www.google.com/search?q=pizza&npsic=0&rflfq=1&rldoc=1&rlha=0&rllag=53350059,-6249133,1754&tbm=lcl&sa=X&ved=2ahUKEwiC3cLZ0JLgAhXHUxUIHQrsBC4QtgN6BAgBEAQ",
-    gps_coordinates: {
-      latitude: 53.350059,
-      longitude: -6.249133,
-      altitude: 1754
+  "local_map": {
+    "link": "https://www.google.com/search?q=pizza&npsic=0&rflfq=1&rldoc=1&rlha=0&rllag=53350059,-6249133,1754&tbm=lcl&sa=X&ved=2ahUKEwiC3cLZ0JLgAhXHUxUIHQrsBC4QtgN6BAgBEAQ",
+    "gps_coordinates": {
+      "latitude": 53.350059,
+      "longitude": -6.249133,
+      "altitude": 1754
     },
-    local_results: [{
-        position: 1,
-        title: "Apache Pizza Temple Bar",
-        extensions: [
+    "local_results": [{
+        "position": 1,
+        "title": "Apache Pizza Temple Bar",
+        "extensions": [
           "American-style pizza-delivery chain"
         ],
-        rating: 3.6,
-        reviews: 382,
-        type: "Pizza",
-        block_position: 1
+        "rating": 3.6,
+        "reviews": 382,
+        "type": "Pizza",
+        "block_position": 1
       },
       {
-        position: 2,
-        title: "Ciao Woodfire Pizza",
-        extensions: [
+        "position": 2,
+        "title": "Ciao Woodfire Pizza",
+        "extensions": [
           "Casual",
           "Vegetarian options",
           "Delivery"
         ],
-        rating: 4.3,
-        reviews: 80,
-        price: "€",
-        type: "Pizza",
-        block_position: 1
+        "rating": 4.3,
+        "reviews": 80,
+        "price": "€",
+        "type": "Pizza",
+        "block_position": 1
       },
       {
-        position: 3,
-        title: "Independent Pizza Company",
-        extensions: [
+        "position": 3,
+        "title": "Independent Pizza Company",
+        "extensions": [
           "American-style pizza restaurant"
         ],
-        rating: 4.4,
-        reviews: 458,
-        type: "Pizza",
-        block_position: 1
+        "rating": 4.4,
+        "reviews": 458,
+        "type": "Pizza",
+        "block_position": 1
       }
-    ],
-    knowledge_graph: {
-      title: "Pizza",
-      type: "Dish",
-      description: "Pizza is a savory dish of Italian origin, consisting of a usually round, flattened base of leavened wheat-based dough topped with tomatoes, cheese, and various other ingredients baked at a high temperature, traditionally in a wood-fired oven.",
-      source: {
-        name: "Wikipedia",
-        link: "https://en.wikipedia.org/wiki/Pizza"
-      },
-      nutrition_facts: {
-        total_fat: [
-          "10 g",
-          "15%"
-        ],
-        sugar: [
-          "3.6 g"
-        ],
-        protein: [
-          "11 g",
-          "22%"
-        ]
-      }
+    ]
+  },
+  "knowledge_graph": {
+    "title": "Pizza",
+    "type": "Dish",
+    "description": "Pizza is a savory dish of Italian origin, consisting of a usually round, flattened base of leavened wheat-based dough topped with tomatoes, cheese, and various other ingredients baked at a high temperature, traditionally in a wood-fired oven.",
+    "source": {
+      "name": "Wikipedia",
+      "link": "https://en.wikipedia.org/wiki/Pizza"
     },
-    related_searches: [{
-        query: "apache pizza",
-        link: "https://www.google.com/search?q=apache+pizza&sa=X&ved=2ahUKEwiC3cLZ0JLgAhXHUxUIHQrsBC4Q1QIoAHoECAUQAQ"
-      },
-      {
-        query: "domino's pizza",
-        link: "https://www.google.com/search?q=domino%27s+pizza&sa=X&ved=2ahUKEwiC3cLZ0JLgAhXHUxUIHQrsBC4Q1QIoAXoECAUQAg"
-      }
-    ],
-    organic_results: [{
-        position: 1,
-        title: "10 Best Pizzas in Dublin - A slice of the city for every price point ...",
-        link: "https://www.independent.ie/life/travel/ireland/10-best-pizzas-in-dublin-a-slice-of-the-city-for-every-price-point-37248689.html",
-        domain: "www.independent.ie",
-        displayed_link: "https://www.independent.ie/.../10-best-pizzas-in-dublin-a-slice-of-the-city-for-every-p...",
-        snippet: "Oct 20, 2018 - Looking for the best pizza in Dublin? Pól Ó Conghaile scours the city for top-notch pie... whatever your budget.",
-        cached_page_link: "https://webcache.googleusercontent.com/search?q=cache:wezzRov42dkJ:https://www.independent.ie/life/travel/ireland/10-best-pizzas-in-dublin-a-slice-of-the-city-for-every-price-point-37248689.html+&cd=4&hl=en&ct=clnk&gl=ie",
-        block_position: 2
-      },
-      {
-        position: 2,
-        title: "Domino's Pizza: Pizza for Delivery or Takeaway Near You",
-        link: "https://www.dominos.ie/",
-        domain: "www.dominos.ie",
-        displayed_link: "https://www.dominos.ie/",
-        snippet: "Visit Domino's Pizza for a tasty pizza delivery or takeaway near you. Order online today for a piping hot pizza delivered directly to your door.",
-        cached_page_link: "https://webcache.googleusercontent.com/search?q=cache:djFeLNPbR3wJ:https://www.dominos.ie/+&cd=5&hl=en&ct=clnk&gl=ie",
-        related_page_link: "https://www.google.com/search?q=related:https://www.dominos.ie/+pizza&tbo=1&sa=X&ved=2ahUKEwiC3cLZ0JLgAhXHUxUIHQrsBC4QHzAEegQICRAF",
-        block_position: 2
-      },
-      {
-        position: 3,
-        title: "Pizza Takeaway and Restaurant Delivery | Order Online at Just Eat",
-        link: "https://www.just-eat.ie/takeaways/pizza/",
-        domain: "www.just-eat.ie",
-        displayed_link: "https://www.just-eat.ie › Home › All cuisine types › Pizza",
-        snippet: "Who doesn't love pizza, right? Order online with Just Eat for collection or delivery from the best pizza takeaways and restaurants in your local area.",
-        cached_page_link: "https://webcache.googleusercontent.com/search?q=cache:G8MduioP3LoJ:https://www.just-eat.ie/takeaways/pizza/+&cd=6&hl=en&ct=clnk&gl=ie",
-        related_page_link: "https://www.google.com/search?q=related:https://www.just-eat.ie/takeaways/pizza/+pizza&tbo=1&sa=X&ved=2ahUKEwiC3cLZ0JLgAhXHUxUIHQrsBC4QHzAFegQICxAG",
-        block_position: 2
-      },
-      {
-        position: 4,
-        title: "Pizza Delivery, Deals & Takeaway | Order Online with Pizza Hut Delivery",
-        link: "https://www.pizzahutdelivery.ie/",
-        domain: "www.pizzahutdelivery.ie",
-        displayed_link: "https://www.pizzahutdelivery.ie/",
-        snippet: "Pizza Hut - Order pizza online for free delivery, get the best deals, and find your nearest branch for dine-in or collection.",
-        cached_page_link: "https://webcache.googleusercontent.com/search?q=cache:2jlup2QZFpgJ:https://www.pizzahutdelivery.ie/+&cd=7&hl=en&ct=clnk&gl=ie",
-        block_position: 2
-      }
-    ],
-    related_places: [{
-      link: "https://www.google.com/search?tbm=lcl&q=pizza&rflfq=1&num=20&stick=H4sIAAAAAAAAAB1QS0pDQRAki4hrn7h4qxyhu_q_9SZCAgZBxASEHMcTeC5PYT1nMTNdUNVVdX-3LuhAD6bVBpIR0usSWhs0aWLpKtG6PqoHzMJtvNOlrBvrg0HGiuxogZWUrsu0eKVqiyREuoLgtqCRQECjPapATdOSGDWM6ZBVgXWx7HaqasLUPEVqXXSg6QUTunNRWlsXzj4akUihv6LnTRTigxiZbO9IDfKtaHyykBV0xK1O0OiSwhyEt2_2yecbMtqaUdxZuakGSqs90TXFuJlGFJ1TMkwz5mAFyv6y1EE2I4g43P-9Bn9iwhSTklXKVhTmw01myRODCoLOPtiGIVTLmFF-drvf3dPz6XI9HM_v76fPy-HrfH09vJ2Pl-_9_uN8u738AZh-lQfPAQAA&sa=X&ved=2ahUKEwiC3cLZ0JLgAhXHUxUIHQrsBC4Q_KoBMA16BAgCEAM",
-      theme: "Best dinners with kids",
-      places: "Pinocchio Italian Restaurant - Temple Bar, Cafe Topolisand more",
-      images: [
-        "https://lh5.googleusercontent.com/p/AF1QipNhGt40OpSS408waVJUHeItGrrGqImmEKzuVbBv=w152-h152-n-k-no"
+    "nutrition_facts": {
+      "total_fat": [
+        "10 g",
+        "15%"
+      ],
+      "sugar": [
+        "3.6 g"
+      ],
+      "protein": [
+        "11 g",
+        "22%"
       ]
-    }],
-    pagination: {
-      current: "1",
-      next: "https://www.google.com/search?q=pizza&ei=fRZQXMKqL8en1fAPitiT8AI&start=10&sa=N&ved=0ahUKEwiC3cLZ0JLgAhXHUxUIHQrsBC4Q8NMDCOkB",
-      other_pages: {
-        2: "https://www.google.com/search?q=pizza&ei=fRZQXMKqL8en1fAPitiT8AI&start=10&sa=N&ved=0ahUKEwiC3cLZ0JLgAhXHUxUIHQrsBC4Q8tMDCNcB"
-      },
-      api_pagination: {
-        next: "https://api.serpwow.com/live/search?api_key=4BCC1B8B&q=pizza&start=10",
-        other_pages: {
-          2: "https://api.serpwow.com/live/search?api_key=4BCC1B8B&q=pizza&start=10"
-        }
-      }
+    }
+  },
+  "related_searches": [{
+      "query": "apache pizza",
+      "link": "https://www.google.com/search?q=apache+pizza&sa=X&ved=2ahUKEwiC3cLZ0JLgAhXHUxUIHQrsBC4Q1QIoAHoECAUQAQ"
     },
+    {
+      "query": "domino's pizza",
+      "link": "https://www.google.com/search?q=domino%27s+pizza&sa=X&ved=2ahUKEwiC3cLZ0JLgAhXHUxUIHQrsBC4Q1QIoAXoECAUQAg"
+    }
+  ],
+  "organic_results": [{
+      "position": 1,
+      "title": "10 Best Pizzas in Dublin - A slice of the city for every price point ...",
+      "link": "https://www.independent.ie/life/travel/ireland/10-best-pizzas-in-dublin-a-slice-of-the-city-for-every-price-point-37248689.html",
+      "domain": "www.independent.ie",
+      "displayed_link": "https://www.independent.ie/.../10-best-pizzas-in-dublin-a-slice-of-the-city-for-every-p...",
+      "snippet": "Oct 20, 2018 - Looking for the best pizza in Dublin? Pól Ó Conghaile scours the city for top-notch pie... whatever your budget.",
+      "cached_page_link": "https://webcache.googleusercontent.com/search?q=cache:wezzRov42dkJ:https://www.independent.ie/life/travel/ireland/10-best-pizzas-in-dublin-a-slice-of-the-city-for-every-price-point-37248689.html+&cd=4&hl=en&ct=clnk&gl=ie",
+      "block_position": 2
+    },
+    {
+      "position": 2,
+      "title": "Domino's Pizza: Pizza for Delivery or Takeaway Near You",
+      "link": "https://www.dominos.ie/",
+      "domain": "www.dominos.ie",
+      "displayed_link": "https://www.dominos.ie/",
+      "snippet": "Visit Domino's Pizza for a tasty pizza delivery or takeaway near you. Order online today for a piping hot pizza delivered directly to your door.",
+      "cached_page_link": "https://webcache.googleusercontent.com/search?q=cache:djFeLNPbR3wJ:https://www.dominos.ie/+&cd=5&hl=en&ct=clnk&gl=ie",
+      "related_page_link": "https://www.google.com/search?q=related:https://www.dominos.ie/+pizza&tbo=1&sa=X&ved=2ahUKEwiC3cLZ0JLgAhXHUxUIHQrsBC4QHzAEegQICRAF",
+      "block_position": 2
+    },
+    {
+      "position": 3,
+      "title": "Pizza Takeaway and Restaurant Delivery | Order Online at Just Eat",
+      "link": "https://www.just-eat.ie/takeaways/pizza/",
+      "domain": "www.just-eat.ie",
+      "displayed_link": "https://www.just-eat.ie › Home › All cuisine types › Pizza",
+      "snippet": "Who doesn't love pizza, right? Order online with Just Eat for collection or delivery from the best pizza takeaways and restaurants in your local area.",
+      "cached_page_link": "https://webcache.googleusercontent.com/search?q=cache:G8MduioP3LoJ:https://www.just-eat.ie/takeaways/pizza/+&cd=6&hl=en&ct=clnk&gl=ie",
+      "related_page_link": "https://www.google.com/search?q=related:https://www.just-eat.ie/takeaways/pizza/+pizza&tbo=1&sa=X&ved=2ahUKEwiC3cLZ0JLgAhXHUxUIHQrsBC4QHzAFegQICxAG",
+      "block_position": 2
+    },
+    {
+      "position": 4,
+      "title": "Pizza Delivery, Deals & Takeaway | Order Online with Pizza Hut Delivery",
+      "link": "https://www.pizzahutdelivery.ie/",
+      "domain": "www.pizzahutdelivery.ie",
+      "displayed_link": "https://www.pizzahutdelivery.ie/",
+      "snippet": "Pizza Hut - Order pizza online for free delivery, get the best deals, and find your nearest branch for dine-in or collection.",
+      "cached_page_link": "https://webcache.googleusercontent.com/search?q=cache:2jlup2QZFpgJ:https://www.pizzahutdelivery.ie/+&cd=7&hl=en&ct=clnk&gl=ie",
+      "block_position": 2
+    }
+  ],
+  "related_places": [{
+    "link": "https://www.google.com/search?tbm=lcl&q=pizza&rflfq=1&num=20&stick=H4sIAAAAAAAAAB1QS0pDQRAki4hrn7h4qxyhu_q_9SZCAgZBxASEHMcTeC5PYT1nMTNdUNVVdX-3LuhAD6bVBpIR0usSWhs0aWLpKtG6PqoHzMJtvNOlrBvrg0HGiuxogZWUrsu0eKVqiyREuoLgtqCRQECjPapATdOSGDWM6ZBVgXWx7HaqasLUPEVqXXSg6QUTunNRWlsXzj4akUihv6LnTRTigxiZbO9IDfKtaHyykBV0xK1O0OiSwhyEt2_2yecbMtqaUdxZuakGSqs90TXFuJlGFJ1TMkwz5mAFyv6y1EE2I4g43P-9Bn9iwhSTklXKVhTmw01myRODCoLOPtiGIVTLmFF-drvf3dPz6XI9HM_v76fPy-HrfH09vJ2Pl-_9_uN8u738AZh-lQfPAQAA&sa=X&ved=2ahUKEwiC3cLZ0JLgAhXHUxUIHQrsBC4Q_KoBMA16BAgCEAM",
+    "theme": "Best dinners with kids",
+    "places": "Pinocchio Italian Restaurant - Temple Bar, Cafe Topolisand more",
+    "images": [
+      "https://lh5.googleusercontent.com/p/AF1QipNhGt40OpSS408waVJUHeItGrrGqImmEKzuVbBv=w152-h152-n-k-no"
+    ]
+  }],
+  "pagination": {
+    "current": "1",
+    "next": "https://www.google.com/search?q=pizza&ei=fRZQXMKqL8en1fAPitiT8AI&start=10&sa=N&ved=0ahUKEwiC3cLZ0JLgAhXHUxUIHQrsBC4Q8NMDCOkB",
+    "other_pages": {
+      "2": "https://www.google.com/search?q=pizza&ei=fRZQXMKqL8en1fAPitiT8AI&start=10&sa=N&ved=0ahUKEwiC3cLZ0JLgAhXHUxUIHQrsBC4Q8tMDCNcB"
+    },
+    "api_pagination": {
+      "next": "https://api.serpwow.com/live/search?api_key=4BCC1B8B&q=pizza&start=10",
+      "other_pages": {
+        "2": "https://api.serpwow.com/live/search?api_key=4BCC1B8B&q=pizza&start=10"
+      }
+    }
   }
+}
 ```
 
 ## Getting an API Key

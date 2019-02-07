@@ -1,15 +1,13 @@
-from setuptools import setup, find_packages
-from codecs import open
 from os import path
+from setuptools import setup
 
 here = path.abspath(path.dirname(__file__))
 
-import pypandoc
-long_description = pypandoc.convert(path.join(here, 'README.md'), 'rst')
-
+with open(path.join(here, 'README.md'), "r") as fh:
+    long_description = fh.read()
 
 setup(name='google-search-results-serpwow',
-      version='1.0.9',
+      version='1.1.1',
       description='PIP package to scrape and parse Google Search Results using SerpWow. Visit https://serpwow.com to get a free API key.',
       url='https://github.com/serpwow/google-search-results-python',
       author='SerpWow',
@@ -22,4 +20,5 @@ setup(name='google-search-results-serpwow',
     install_requires = ["requests"],
     packages=['serpwow'],
     long_description=long_description,
+    long_description_content_type="text/markdown"
 )

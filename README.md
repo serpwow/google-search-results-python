@@ -183,11 +183,13 @@ import json
 # create the serpwow object, passing in our API key
 serpwow = GoogleSearchResults("demo")
 
-# perform a search on Google News, just looking at blogs, filtering out duplicates
+# perform a search on Google News, just looking at blogs, ordered by date, in the last year, filtering out duplicates
 params = {
   "q" : "football news",
   "search_type" : "news",
   "news_type" : "blogs",
+  "sort_by": "date",
+  "time_period": "last_year",
   "show_duplicates" : "false"
 }
 result = serpwow.get_json(params)

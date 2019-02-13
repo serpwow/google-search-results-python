@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: google-search-results-serpwow
-Version: 1.1.1
+Version: 1.1.2
 Summary: PIP package to scrape and parse Google Search Results using SerpWow. Visit https://serpwow.com to get a free API key.
 Home-page: https://github.com/serpwow/google-search-results-python
 Author: SerpWow
@@ -191,11 +191,13 @@ Description: # Google Search Results in Python
         # create the serpwow object, passing in our API key
         serpwow = GoogleSearchResults("demo")
         
-        # perform a search on Google News, just looking at blogs, filtering out duplicates
+        # perform a search on Google News, just looking at blogs, ordered by date, in the last year, filtering out duplicates
         params = {
           "q" : "football news",
           "search_type" : "news",
           "news_type" : "blogs",
+          "sort_by": "date",
+          "time_period": "last_year",
           "show_duplicates" : "false"
         }
         result = serpwow.get_json(params)
@@ -220,7 +222,7 @@ Description: # Google Search Results in Python
         ```
         
         ## Returning results as JSON, HTML and CSV
-        ``google-search-results-serpwow`` can return data in JSON, HTML and CSV formats using the ``get_json``, ``get_html`` and ``get_csv`` methods. For CSV results use the ``csv_fields`` param ([docs](https://serpwow.com/docs/search/csvfields)) to request specific result fields.
+        SerpWow can return data in JSON, HTML and CSV formats using the ``get_json``, ``get_html`` and ``get_csv`` methods. For CSV results use the ``csv_fields`` param ([docs](https://serpwow.com/docs/search/csvfields)) to request specific result fields.
         ```python
         from serpwow.google_search_results import GoogleSearchResults
         import json

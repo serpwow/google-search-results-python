@@ -7,7 +7,7 @@ with open(path.join(here, 'README.md'), "r") as fh:
     long_description = fh.read()
 
 setup(name='google-search-results-serpwow',
-      version='1.1.1',
+      version='1.1.2',
       description='PIP package to scrape and parse Google Search Results using SerpWow. Visit https://serpwow.com to get a free API key.',
       url='https://github.com/serpwow/google-search-results-python',
       author='SerpWow',

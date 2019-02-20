@@ -20,6 +20,7 @@ We have included examples here but full SerpWow API documentation is available a
 - [Search API Docs](https://serpwow.com/docs/search/overview) 
 - [Locations API Docs](https://serpwow.com/docs/locations/overview) 
 - [Account API Docs](https://serpwow.com/docs/account)
+- [Batches API Docs](https://serpwow.com/docs/batches)
 
 You can also use the [API Playground](https://app.serpwow.com/playground) to visually build Google search requests using SerpWow.
 

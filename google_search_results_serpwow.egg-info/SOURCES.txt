@@ -7,3 +7,4 @@ google_search_results_serpwow.egg-info/requires.txt
 google_search_results_serpwow.egg-info/top_level.txt
 serpwow/__init__.py
 serpwow/google_search_results.py
+serpwow/test.py

@@ -56,7 +56,7 @@ params = {
 result = serpwow.get_json(params)
 
 # pretty-print the result
-print json.dumps(result, indent=2, sort_keys=True)
+print(json.dumps(result, indent=2, sort_keys=True))
 ```
 
 ## Example Response
@@ -172,7 +172,7 @@ params = {
 result = serpwow.get_json(params)
 
 # pretty-print the result
-print json.dumps(result, indent=2, sort_keys=True)
+print(json.dumps(result, indent=2, sort_keys=True))
 ```
 
 ## Searching Google Places, Google Videos, Google Images, Google Shopping and Google News
@@ -194,7 +194,7 @@ params = {
   "show_duplicates" : "false"
 }
 result = serpwow.get_json(params)
-print json.dumps(result, indent=2, sort_keys=True)
+print(json.dumps(result, indent=2, sort_keys=True))
 
 # perform a search on Google Places for "plumber" in London
 params = {
@@ -203,7 +203,7 @@ params = {
   "location" : "London,England,United Kingdom"
 }
 result = serpwow.get_json(params)
-print json.dumps(result, indent=2, sort_keys=True)
+print(json.dumps(result, indent=2, sort_keys=True))
 
 # perform an image search on Google Images for "red flowers"
 params = {
@@ -211,7 +211,7 @@ params = {
   "search_type" : "images"
 }
 result = serpwow.get_json(params)
-print json.dumps(result, indent=2, sort_keys=True)
+print(json.dumps(result, indent=2, sort_keys=True))
 ```
 
 ## Returning results as JSON, HTML and CSV
@@ -374,7 +374,7 @@ params = {
 result = serpwow.get_locations(params)
 
 # pretty-print the result
-print json.dumps(result, indent=2, sort_keys=True)
+print(json.dumps(result, indent=2, sort_keys=True))
 ```
 
 ## Account API Example
@@ -390,7 +390,7 @@ serpwow = GoogleSearchResults("demo")
 result = serpwow.get_account()
 
 # pretty-print the result
-print json.dumps(result, indent=2, sort_keys=True)
+print(json.dumps(result, indent=2, sort_keys=True))
 ```
 
 ## Batches API

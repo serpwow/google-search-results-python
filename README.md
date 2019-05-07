@@ -301,7 +301,7 @@ if success:
 ```
 
 ## Paginating results, returning up to 100 results per page
-Use the ``start`` and ``num`` parameters to paginate through Google search results. ``start`` is 0-based. The maximum number of results returned per page (controlled by the ``num`` param) is 100 (a Google-imposed limitation) for all ``search_type``'s apart from Google Places, where the maximum is 20. Here's an example.
+Use the ``page`` and ``num`` parameters to paginate through Google search results. The maximum number of results returned per page (controlled by the ``num`` param) is 100 (a Google-imposed limitation) for all ``search_type``'s apart from Google Places, where the maximum is 20. Here's an example.
 ```python
 from serpwow.google_search_results import GoogleSearchResults
 import json

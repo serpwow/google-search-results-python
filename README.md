@@ -310,13 +310,13 @@ import json
 serpwow = GoogleSearchResults("demo")
 params = {
   "q" : "pizza",
-  "start" : 0,
+  "page" : 1,
   "num": 100
 }
 result_page_1 = serpwow.get_json(params)
 
 # request the next 100 results
-params["start"] = 100
+params["page"] = 2
 result_page_2 = serpwow.get_json(params)
 
 # pretty-print the result
@@ -346,7 +346,7 @@ params = {
   "time_period_max" : "02/08/2019",
   "device" : "mobile",
   "csv_fields" : "search.q,organic_results.position,organic_results.domain",
-  "start" : "0",
+  "page" : "1",
   "num" : "100"
 }
 

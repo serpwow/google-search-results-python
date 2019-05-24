@@ -189,6 +189,14 @@ class GoogleSearchResults(object):
         """
         return json.loads(self.http_get({}, self.ENDPOINT_BATCHES + "/" + str(batch_id) + "/searches/" + str(page)))
 
+    def find_batch_searches(self, batch_id, page, searchTerm):
+        """Returns:
+            JSON with the formatted response content
+        """
+        params = {}
+        params["q"] = searchTerm
+        return json.loads(self.http_get(params, self.ENDPOINT_BATCHES + "/" + str(batch_id) + "/searches/" + str(page)))
+
     def list_batch_searches_as_json(self, batch_id):
         """Returns:
             JSON with the formatted response content

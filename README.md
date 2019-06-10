@@ -46,7 +46,7 @@ from serpwow.google_search_results import GoogleSearchResults
 import json
 
 # create the serpwow object, passing in our API key
-serpwow = GoogleSearchResults("demo")
+serpwow = GoogleSearchResults("API_KEY")
 
 # set up a dict for the search parameters
 params = {
@@ -159,7 +159,7 @@ from serpwow.google_search_results import GoogleSearchResults
 import json
 
 # create the serpwow object, passing in our API key
-serpwow = GoogleSearchResults("demo")
+serpwow = GoogleSearchResults("API_KEY")
 
 # set up a dict for the query (q) and location parameters
 # note that the "location" parameter should be a value
@@ -183,7 +183,7 @@ from serpwow.google_search_results import GoogleSearchResults
 import json
 
 # create the serpwow object, passing in our API key
-serpwow = GoogleSearchResults("demo")
+serpwow = GoogleSearchResults("API_KEY")
 
 # perform a search on Google News, just looking at blogs, ordered by date, in the last year, filtering out duplicates
 params = {
@@ -222,7 +222,7 @@ from serpwow.google_search_results import GoogleSearchResults
 import json
 
 # create the serpwow object, passing in our API key
-serpwow = GoogleSearchResults("demo")
+serpwow = GoogleSearchResults("API_KEY")
 
 # set up a dict for the query (q) and location parameters
 # note that the "location" parameter should be a value
@@ -248,7 +248,7 @@ To request that SerpWow renders the Google search results via a mobile or tablet
 from serpwow.google_search_results import GoogleSearchResults
 import json
 
-serpwow = GoogleSearchResults("demo")
+serpwow = GoogleSearchResults("API_KEY")
 
 # set up the mobile params
 params_mobile = {
@@ -284,7 +284,7 @@ from serpwow.google_search_results import GoogleSearchResults
 import json
 
 # make a simple query, returning JSON
-serpwow = GoogleSearchResults("demo")
+serpwow = GoogleSearchResults("API_KEY")
 result = serpwow.get_json({ "q" : "pizza" })
 
 # determine if the request was successful
@@ -307,7 +307,7 @@ from serpwow.google_search_results import GoogleSearchResults
 import json
 
 # request the first 100 results
-serpwow = GoogleSearchResults("demo")
+serpwow = GoogleSearchResults("API_KEY")
 params = {
   "q" : "pizza",
   "page" : 1,
@@ -331,7 +331,7 @@ print json.dumps(result_page_2, indent=2, sort_keys=True)
 from serpwow.google_search_results import GoogleSearchResults
 
 # create the serpwow object, passing in our API key
-serpwow = GoogleSearchResults("demo")
+serpwow = GoogleSearchResults("API_KEY")
 
 # set up a dict for the search parameters, retrieving results as CSV (note the csv_fields param)
 params = {
@@ -364,7 +364,7 @@ from serpwow.google_search_results import GoogleSearchResults
 import json
 
 # create the serpwow object, passing in our API key
-serpwow = GoogleSearchResults("demo")
+serpwow = GoogleSearchResults("API_KEY")
 
 # set up a dict for the location query parameters
 params = {
@@ -385,7 +385,7 @@ from serpwow.google_search_results import GoogleSearchResults
 import json
 
 # create the serpwow object, passing in our API key
-serpwow = GoogleSearchResults("demo")
+serpwow = GoogleSearchResults("API_KEY")
 
 # get our account info
 result = serpwow.get_account()

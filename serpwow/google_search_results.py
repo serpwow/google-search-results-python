@@ -6,7 +6,7 @@ class GoogleSearchResults(object):
     ```python
     from google_search_results import GoogleSearchResults
 
-    serpwow = GoogleSearchResults("demo")
+    serpwow = GoogleSearchResults("API_KEY")
 
     params = {
     "q" : "pizza",

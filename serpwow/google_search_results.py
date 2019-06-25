@@ -30,7 +30,7 @@ class GoogleSearchResults(object):
         self.API_KEY = api_key
 
 
-    def http_get(self, params_dict, prefix):
+    def http_get(self, params_dict, prefix, isJson=True):
         try:
 
             if params_dict:
@@ -42,8 +42,11 @@ class GoogleSearchResults(object):
             self.params_dict["api_key"] = self.API_KEY
 
             response = requests.get(prefix, self.params_dict, timeout=600)
-
-            return response.text
+            
+            if isJson:
+                return response.content
+            else:
+                return response.text
 
         except requests.HTTPError as e:
             print(e, e.response.status_code)
@@ -104,35 +107,35 @@ class GoogleSearchResults(object):
             JSON with the formatted response content
         """
         params["output"] = "json"
-        return json.loads(self.http_get(params, self.ENDPOINT_SEARCH))
+        return json.loads(self.http_get(params, self.ENDPOINT_SEARCH, True))
 
     def get_html(self, params):
         """Returns:
             HTML with the formatted response content
         """
         params["output"] = "html"
-        return self.http_get(params, self.ENDPOINT_SEARCH)
+        return self.http_get(params, self.ENDPOINT_SEARCH, False)
 
     def get_csv(self, params):
         """Returns:
             CSV with the formatted response content
         """
         params["output"] = "csv"
-        return self.http_get(params, self.ENDPOINT_SEARCH)
+        return self.http_get(params, self.ENDPOINT_SEARCH, False)
 
 
     def get_locations(self, params):
         """Returns:
             JSON with the formatted response content
         """
-        return json.loads(self.http_get(params, self.ENDPOINT_LOCATIONS))
+        return json.loads(self.http_get(params, self.ENDPOINT_LOCATIONS), True)
 
 
     def get_account(self):
         """Returns:
             JSON with the formatted response content
         """
-        return json.loads(self.http_get(None, self.ENDPOINT_ACCOUNT))
+        return json.loads(self.http_get(None, self.ENDPOINT_ACCOUNT), True)
 
 
     def create_batch(self, params):
@@ -151,19 +154,19 @@ class GoogleSearchResults(object):
         """Returns:
             JSON with the formatted response content
         """
-        return json.loads(self.http_get({}, self.ENDPOINT_BATCHES + "/" + str(batch_id) + "/start"))
+        return json.loads(self.http_get({}, self.ENDPOINT_BATCHES + "/" + str(batch_id) + "/start", True))
 
     def get_batch(self, batch_id):
         """Returns:
             JSON with the formatted response content
         """
-        return json.loads(self.http_get({}, self.ENDPOINT_BATCHES + "/" + str(batch_id)))
+        return json.loads(self.http_get({}, self.ENDPOINT_BATCHES + "/" + str(batch_id), True))
 
     def list_batches(self):
         """Returns:
             JSON with the formatted response content
         """
-        return json.loads(self.http_get({}, self.ENDPOINT_BATCHES))
+        return json.loads(self.http_get({}, self.ENDPOINT_BATCHES, True))
 
     def delete_batch(self, batch_id):
         """Returns:
@@ -187,7 +190,7 @@ class GoogleSearchResults(object):
         """Returns:
             JSON with the formatted response content
         """
-        return json.loads(self.http_get({}, self.ENDPOINT_BATCHES + "/" + str(batch_id) + "/searches/" + str(page)))
+        return json.loads(self.http_get({}, self.ENDPOINT_BATCHES + "/" + str(batch_id) + "/searches/" + str(page), True))
 
     def find_batch_searches(self, batch_id, page, searchTerm):
         """Returns:
@@ -195,29 +198,29 @@ class GoogleSearchResults(object):
         """
         params = {}
         params["q"] = searchTerm
-        return json.loads(self.http_get(params, self.ENDPOINT_BATCHES + "/" + str(batch_id) + "/searches/" + str(page)))
+        return json.loads(self.http_get(params, self.ENDPOINT_BATCHES + "/" + str(batch_id) + "/searches/" + str(page), True))
 
     def list_batch_searches_as_json(self, batch_id):
         """Returns:
             JSON with the formatted response content
         """
-        return json.loads(self.http_get({}, self.ENDPOINT_BATCHES + "/" + str(batch_id) + "/searches/json"))
+        return json.loads(self.http_get({}, self.ENDPOINT_BATCHES + "/" + str(batch_id) + "/searches/json", True))
 
     def list_batch_searches_as_csv(self, batch_id):
         """Returns:
             JSON with the formatted response content
         """
-        return json.loads(self.http_get({}, self.ENDPOINT_BATCHES + "/" + str(batch_id) + "/searches/csv"))
+        return json.loads(self.http_get({}, self.ENDPOINT_BATCHES + "/" + str(batch_id) + "/searches/csv", False))
 
     def list_batch_result_sets(self, batch_id):
         """Returns:
             JSON with the formatted response content
         """
-        return json.loads(self.http_get({}, self.ENDPOINT_BATCHES + "/" + str(batch_id) + "/results/"))
+        return json.loads(self.http_get({}, self.ENDPOINT_BATCHES + "/" + str(batch_id) + "/results/", True))
 
     def get_batch_result_set(self, batch_id, result_set_id):
         """Returns:
             JSON with the formatted response content
         """
-        return json.loads(self.http_get({}, self.ENDPOINT_BATCHES + "/" + str(batch_id) + "/results/" + str(result_set_id)))
+        return json.loads(self.http_get({}, self.ENDPOINT_BATCHES + "/" + str(batch_id) + "/results/" + str(result_set_id), True))
 

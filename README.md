@@ -61,7 +61,7 @@ print(json.dumps(result, indent=2, sort_keys=True))
 ```
 
 ## Example Response
-A snapshot (shortened for brevity) of the JSON response returned is shown below. For details of all of the fields from the Google search results page that are parsed please see the [docs](https://serpwow.com/docs/search-api/results/overview).
+A snapshot (shortened for brevity) of the JSON response returned is shown below. For details of all of the fields from the Google search results page that are parsed please see the [docs](https://serpwow.com/docs/search-api/results/google/overview).
 ```json
 {
   "request_info": {

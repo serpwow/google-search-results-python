@@ -107,7 +107,7 @@ class GoogleSearchResults(object):
             JSON with the formatted response content
         """
         params["output"] = "json"
-        return json.loads(self.http_get(params, self.ENDPOINT_SEARCH, True))
+        return json.loads(self.http_get(params, self.ENDPOINT_SEARCH, True).decode('utf-8'))
 
     def get_html(self, params):
         """Returns:

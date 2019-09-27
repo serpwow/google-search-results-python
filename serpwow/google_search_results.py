@@ -128,14 +128,14 @@ class GoogleSearchResults(object):
         """Returns:
             JSON with the formatted response content
         """
-        return json.loads(self.http_get(params, self.ENDPOINT_LOCATIONS), True)
+        return json.loads(self.http_get(params, self.ENDPOINT_LOCATIONS, True))
 
 
     def get_account(self):
         """Returns:
             JSON with the formatted response content
         """
-        return json.loads(self.http_get(None, self.ENDPOINT_ACCOUNT), True)
+        return json.loads(self.http_get(None, self.ENDPOINT_ACCOUNT, True))
 
 
     def create_batch(self, params):

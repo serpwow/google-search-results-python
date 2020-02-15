@@ -156,6 +156,12 @@ class GoogleSearchResults(object):
         """
         return json.loads(self.http_get({}, self.ENDPOINT_BATCHES + "/" + str(batch_id) + "/start", True))
 
+    def stop_batch(self, batch_id):
+        """Returns:
+            JSON with the formatted response content
+        """
+        return json.loads(self.http_get({}, self.ENDPOINT_BATCHES + "/" + str(batch_id) + "/stop", True))
+
     def get_batch(self, batch_id):
         """Returns:
             JSON with the formatted response content

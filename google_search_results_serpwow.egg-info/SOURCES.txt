@@ -1,0 +1,10 @@
+README.md
+setup.py
+google_search_results_serpwow.egg-info/PKG-INFO
+google_search_results_serpwow.egg-info/SOURCES.txt
+google_search_results_serpwow.egg-info/dependency_links.txt
+google_search_results_serpwow.egg-info/requires.txt
+google_search_results_serpwow.egg-info/top_level.txt
+serpwow/__init__.py
+serpwow/google_search_results.py
+serpwow/test.py

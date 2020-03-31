@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: google-search-results-serpwow
-Version: 1.1.8
+Version: 1.1.9
 Summary: PIP package to scrape and parse Google Search Results using SerpWow. Visit https://serpwow.com to get a free API key.
 Home-page: https://github.com/serpwow/google-search-results-python
 Author: SerpWow

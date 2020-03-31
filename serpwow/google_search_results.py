@@ -222,7 +222,7 @@ class GoogleSearchResults(object):
         """Returns:
             JSON with the formatted response content
         """
-        return json.loads(self.http_get({}, self.ENDPOINT_BATCHES + "/" + str(batch_id) + "/results/", True))
+        return json.loads(self.http_get({}, self.ENDPOINT_BATCHES + "/" + str(batch_id) + "/results", True))
 
     def get_batch_result_set(self, batch_id, result_set_id):
         """Returns:

@@ -39,6 +39,7 @@ class GoogleSearchResults(object):
                 self.params_dict = {}
 
             self.params_dict["source"] = "python"
+            self.params_dict["app_name"] = "serpwow"
             self.params_dict["api_key"] = self.API_KEY
 
             response = requests.get(prefix, self.params_dict, timeout=600)
@@ -81,7 +82,7 @@ class GoogleSearchResults(object):
 
             self.payload["source"] = "python"
 
-            url = prefix + "?api_key=" + self.API_KEY
+            url = prefix + "?app_name=serpwow&api_key=" + self.API_KEY
 
             headers = {'Content-type': 'application/json' }
             response = requests.put(url, json=self.payload, timeout=600, headers=headers)
@@ -94,7 +95,7 @@ class GoogleSearchResults(object):
     def http_delete(self, url):
         try:
 
-            url = url + "?api_key=" + self.API_KEY + "&source=python"
+            url = url + "?app_name=serpwow&api_key=" + self.API_KEY + "&source=python"
 
             response = requests.delete(url, timeout=600)
 

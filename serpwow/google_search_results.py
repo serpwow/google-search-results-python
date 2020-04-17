@@ -24,7 +24,7 @@ class GoogleSearchResults(object):
     ENDPOINT_SEARCH = "https://api.serpwow.com/live/search"
     ENDPOINT_LOCATIONS = "https://api.serpwow.com/live/locations"
     ENDPOINT_ACCOUNT = "https://api.serpwow.com/live/account"
-    ENDPOINT_BATCHES = "https://api.serpwow.com/live/batches"
+    ENDPOINT_BATCHES = "http://localhost/live/batches"
 
     def __init__(self, api_key):
         self.API_KEY = api_key
@@ -61,9 +61,10 @@ class GoogleSearchResults(object):
 
             self.payload["source"] = "python"
 
-            url = prefix + "?api_key=" + self.API_KEY
+            url = prefix + "?app_name=serpwow&api_key=" + self.API_KEY
 
-            response = requests.post(url, json.dumps(self.payload), timeout=600)
+            headers = {'Content-type': 'application/json' }
+            response = requests.post(url, json=self.payload, timeout=600, headers=headers)
 
             return response.text
 
@@ -82,7 +83,8 @@ class GoogleSearchResults(object):
 
             url = prefix + "?api_key=" + self.API_KEY
 
-            response = requests.put(url, json.dumps(self.payload), timeout=600)
+            headers = {'Content-type': 'application/json' }
+            response = requests.put(url, json=self.payload, timeout=600, headers=headers)
 
             return response.text
 

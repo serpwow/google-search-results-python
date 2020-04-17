@@ -24,7 +24,7 @@ class GoogleSearchResults(object):
     ENDPOINT_SEARCH = "https://api.serpwow.com/live/search"
     ENDPOINT_LOCATIONS = "https://api.serpwow.com/live/locations"
     ENDPOINT_ACCOUNT = "https://api.serpwow.com/live/account"
-    ENDPOINT_BATCHES = "http://localhost/live/batches"
+    ENDPOINT_BATCHES = "https://api.serpwow.com/live/batches"
 
     def __init__(self, api_key):
         self.API_KEY = api_key
